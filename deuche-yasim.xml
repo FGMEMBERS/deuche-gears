@@ -67,6 +67,7 @@
         damp="3.8">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/flight/aileron" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.6" dst1="0.6"/>
+        <control-input axis="/controls/flight/ridder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.6" dst1="0.6"/>
 
         <control-output control="STEER" prop="/surface-positions/aileron-pos-norm"/>
   </gear>
@@ -78,6 +79,7 @@
         damp="3.8">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/flight/aileron" control="STEER" square="true" src0="-0.8" src1="0.8" dst0="-0.6" dst1="0.6"/>
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-0.8" src1="0.8" dst0="-0.6" dst1="0.6"/>
 
         <control-output control="STEER" prop="/surface-positions/aileron-pos-norm"/>
   </gear>

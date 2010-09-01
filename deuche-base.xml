@@ -49,12 +49,19 @@
         <int type="int" n="3"> 0 </int>
         <int type="int" n="4"> 0 </int>
         <int type="int" n="5"> 0 </int>
-        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
-        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="0" alias="/instrumentation/doors/Lcrew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/Lpassenger/position-norm"/>
+        <float n="2" alias="/instrumentation/doors/Rcrew/position-norm"/>
+        <float n="3" alias="/instrumentation/doors/Rpassenger/position-norm"/>
+        <float n="4" alias="/instrumentation/doors/roof/position-norm"/>
       </generic>
     </multiplay>
 
     <help>
+      <key>
+        <name>Mouse click</name>
+        <desc>Click on the doors and roof to open / close.</desc>
+      </key>
       <key>
         <name>,</name>
         <desc>Brakes</desc>
@@ -90,11 +97,16 @@
       <screen type="bool">false</screen>
       <roof type="bool">false</roof>
     </gear>
+    <switches>
+      <landing-light type="bool"> false </landing-light>
+    </switches>
   </controls>
 
   <nasal>
-    <deuche>
+    <doors>
       <file>Aircraft/Deuche/Nasal/doors.nas</file>
+    </doors>
+    <deuche>
       <file>Aircraft/Deuche/Nasal/liveries.nas</file>
       <file>Aircraft/Deuche/Nasal/immat.nas</file>
     </deuche>

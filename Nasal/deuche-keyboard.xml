@@ -7,7 +7,7 @@
     <desc>Capotte</desc>
     <binding>
       <command>nasal</command>
-      <script>deuche.doorsystem.passengerexport();</script>
+      <script>doors.doorsystem.roofexport();</script>
     </binding>
   </key>
 
@@ -16,7 +16,19 @@
     <desc>Pilot and passanger doors</desc>
     <binding>
       <command>nasal</command>
-      <script>deuche.doorsystem.crewexport();</script>
+      <script>doors.doorsystem.Lcrewexport();</script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.Rcrewexport();</script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.Lpassengerexport();</script>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.Rpassengerexport();</script>
     </binding>
   </key>
 
@@ -45,7 +57,7 @@
     <desc>get Walker out</desc>
     <binding> 
       <command>nasal</command>
-    <script>walk.get_out();</script>
+      <script>walk.get_out();</script>
     </binding>
   </key>
 
@@ -54,7 +66,7 @@
     <desc>get Walker in</desc>
     <binding> 
       <command>nasal</command>
-    <script>walk.get_in();</script>
+      <script>walk.get_in();</script>
     </binding>
   </key>
 
