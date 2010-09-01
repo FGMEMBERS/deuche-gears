@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -19,7 +19,7 @@
 
   <animation>
     <type>shader</type>
-    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <texture>shader.png</texture>
     <object-name>vitre</object-name>
   </animation>

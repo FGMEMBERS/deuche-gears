@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -30,7 +30,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>intvitres</object-name>
     <object-name>intvitreAG1</object-name>
     <object-name>intvitreAG2</object-name>
@@ -58,9 +58,9 @@
       <x-m> -0.290 </x-m>
       <y-m> -0.242 </y-m>
       <z-m> -0.047 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>   0.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -105,7 +105,7 @@
     <type>rotate</type>
     <object-name>IntPorteAvantGauche</object-name>
     <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> -80.0 </factor>
+    <factor> -80 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m> -0.617 </y1-m>
@@ -121,7 +121,7 @@
     <type>rotate</type>
     <object-name>IntPorteAvantDroite</object-name>
     <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> 80.0 </factor>
+    <factor> 80 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m>  0.617 </y1-m>
@@ -137,7 +137,7 @@
     <type>rotate</type>
     <object-name>IntPorteArriereGauche</object-name>
     <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> -80.0 </factor>
+    <factor> -80 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m> -0.658 </y1-m>
@@ -153,7 +153,7 @@
     <type>rotate</type>
     <object-name>IntPorteArriereDroite</object-name>
     <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> 80.0 </factor>
+    <factor> 80 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m>  0.658 </y1-m>

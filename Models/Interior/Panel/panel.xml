@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -22,9 +22,9 @@
       <x-m>  0.017 </x-m>
       <y-m> -0.295 </y-m>
       <z-m> -0.016 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg> -25.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -25 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 

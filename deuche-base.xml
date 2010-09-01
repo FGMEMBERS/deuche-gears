@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -30,26 +29,28 @@
     </sound>
 
     <walker>
-      <outside type="bool">false</outside>
-      <walking type="bool">false</walking>
-      <speed type="double">0.000006</speed>
-      <latitude-deg type="double">0.0</latitude-deg>
-      <longitude-deg type="double">0.0</longitude-deg>
-      <altitude-ft type="double">0.0</altitude-ft>
-      <heading-deg type="double">0.0</heading-deg>
-      <pitch-deg type="double">0.0</pitch-deg>
-      <roll-deg type="double">0.0</roll-deg>
+      <outside type="bool"> false </outside>
+      <walking type="bool"> false </walking>
+      <speed type="double"> 0.000006  </speed>
+      <latitude-deg type="double">  0 </latitude-deg>
+      <longitude-deg type="double"> 0 </longitude-deg>
+      <altitude-ft type="double">   0 </altitude-ft>
+      <heading-deg type="double">   0 </heading-deg>
+      <pitch-deg type="double">     0 </pitch-deg>
+      <roll-deg type="double">      0 </roll-deg>
     </walker>
 
     <multiplay>
       <chat_display>1</chat_display>
       <generic>
-        <int type="int" n="0">0</int>
-        <int type="int" n="1">0</int>
-        <int type="int" n="2">0</int>
-        <int type="int" n="3">0</int>
-        <int type="int" n="4">0</int>
-        <int type="int" n="5">0</int>
+        <int type="int" n="0"> 0 </int>
+        <int type="int" n="1"> 0 </int>
+        <int type="int" n="2"> 0 </int>
+        <int type="int" n="3"> 0 </int>
+        <int type="int" n="4"> 0 </int>
+        <int type="int" n="5"> 0 </int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -84,76 +85,12 @@
     <keyboard include="Nasal/deuche-keyboard.xml"/>
   </input>
  
-  <engines>
-    <engine>
-      <rpm type="double">700</rpm>
-    </engine>
-  </engines>
-
   <controls>
-    <engines>
-       <engine n="0">
-         <magnetos>3</magnetos>
-       </engine>
-    </engines>
     <gear>
       <screen type="bool">false</screen>
       <roof type="bool">false</roof>
     </gear>
   </controls>
-
-  <input>
-    <keyboard>
-      <key n="77"> 
-        <name>M</name>
-        <desc>engage Reverse</desc>
-        <binding> 
-          <command>property-assign</command>
-          <property>controls/engines/engine[0]/mixture</property>
-          <value type="double">0.0</value>
-        </binding>
-      </key>
-      <key n="109"> 
-        <name>m</name>
-        <desc>disengage Reverse</desc>
-        <binding> 
-          <command>property-assign</command>
-          <property>controls/engines/engine[0]/mixture</property>
-          <value type="double">1.0</value>
-        </binding>
-      </key>
-      <key n="111"> 
-        <name>o</name>
-        <desc>get Walker out</desc>
-        <binding> 
-          <command>nasal</command>
-        <script>walk.get_out();</script>
-        </binding>
-      </key>
-      <key n="79"> 
-        <name>O</name>
-        <desc>get Walker in</desc>
-        <binding> 
-          <command>nasal</command>
-        <script>walk.get_in();</script>
-        </binding>
-      </key>
-      <key n="119"> 
-        <name>w</name>
-        <desc>walk forward</desc>
-        <binding n="0"> 
-          <command>property-toggle</command>
-          <property>/sim/walker/walking</property>
-        </binding>
-        <mod-up>
-          <binding>
-            <command>property-toggle</command>
-            <property>/sim/walker/walking</property>
-          </binding>
-        </mod-up>
-      </key>
-    </keyboard>
-  </input>
 
   <nasal>
     <deuche>
@@ -168,7 +105,4 @@
   </nasal>
 
 </PropertyList>
-
-
-
 

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -104,32 +104,6 @@
     <object-name>lampesB1</object-name>
 
     <!-- Transparence -->
-    <object-name>vitres</object-name>
-    <object-name>vitreAG1</object-name>
-    <object-name>vitreAG2</object-name>
-    <object-name>vitreBG</object-name>
-    <object-name>vitreAD1</object-name>
-    <object-name>vitreAD2</object-name>
-    <object-name>vitreBD</object-name>
-    <object-name>clignotants2</object-name>
-    <object-name>lampesB2</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>vitres</object-name>
-    <object-name>vitreAG1</object-name>
-    <object-name>vitreAG2</object-name>
-    <object-name>vitreBG</object-name>
-    <object-name>vitreAD1</object-name>
-    <object-name>vitreAD2</object-name>
-    <object-name>vitreBD</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
     <object-name>vitres</object-name>
     <object-name>vitreAG1</object-name>
     <object-name>vitreAG2</object-name>
@@ -266,16 +240,81 @@
 -->
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>corps</object-name>
+    <object-name>capot</object-name>
+    <object-name>phares</object-name>
+    <object-name>cercles</object-name>
+    <object-name>attaches</object-name>
+    <object-name>coffre</object-name>
+    <object-name>ailes</object-name>
+    <object-name>barre</object-name>
+    <object-name>tampons</object-name>
+    <object-name>tampons2</object-name>
+    <object-name>parchocs1</object-name>
+    <object-name>parchocs2</object-name>
+    <object-name>retroG</object-name>
+    <object-name>retroD</object-name>
+    <object-name>calandre</object-name>
+    <object-name>chevron</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>baguetteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>baguetteAD</object-name>
+    <object-name>porteBG</object-name>
+    <object-name>baguetteBG</object-name>
+    <object-name>porteBD</object-name>
+    <object-name>baguetteBD</object-name>
+    <object-name>join01</object-name>
+    <object-name>join02</object-name>
+    <object-name>ventile</object-name>
+    <object-name>clignotants1</object-name>
+    <object-name>axes</object-name>
+    <object-name>baguettes</object-name>
+    <object-name>plaqueA</object-name>
+    <object-name>plaqueB</object-name>
+    <object-name>souspharesB</object-name>
+    <object-name>poigneecoffre</object-name>
+    <object-name>lampesB1</object-name>
+  </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+    <object-name>vitreAG1</object-name>
+    <object-name>vitreAG2</object-name>
+    <object-name>vitreBG</object-name>
+    <object-name>vitreAD1</object-name>
+    <object-name>vitreAD2</object-name>
+    <object-name>vitreBD</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+    <object-name>vitreAG1</object-name>
+    <object-name>vitreAG2</object-name>
+    <object-name>vitreBG</object-name>
+    <object-name>vitreAD1</object-name>
+    <object-name>vitreAD2</object-name>
+    <object-name>vitreBD</object-name>
+    <object-name>clignotants2</object-name>
+    <object-name>lampesB2</object-name>
+  </animation>
+
   <!-- Interieur -->
   <model>
     <path>Aircraft/Deuche/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m> 0.0 </x-m>
-      <y-m> 0.0 </y-m>
-      <z-m> 0.0 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>   0.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -283,12 +322,12 @@
   <model>
     <path>Aircraft/Deuche/Models/Immat/immat.xml</path>
     <offsets>
-      <x-m> 0.0 </x-m>
-      <y-m> 0.0 </y-m>
-      <z-m> 0.0 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>   0.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -350,8 +389,8 @@
     <object-name>ToutAvantGauche</object-name>
     <property>gear/gear[0]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
     </interpolation>
     <center>
       <x-m> -0.694 </x-m>
@@ -370,8 +409,8 @@
     <object-name>ToutAvantDroite</object-name>
     <property>gear/gear[1]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
     </interpolation>
     <center>
       <x-m> -0.694 </x-m>
@@ -390,8 +429,8 @@
     <object-name>ToutArriereGauche</object-name>
     <property>gear/gear[2]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.671 </x-m>
@@ -410,8 +449,8 @@
     <object-name>ToutArriereDroite</object-name>
     <property>gear/gear[3]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 20 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.671 </x-m>
@@ -429,8 +468,8 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueAvantGauche</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>30</factor>
+    <property>surface-positions/aileron-pos-norm</property>
+    <factor> 30 </factor>
     <axis>
       <x1-m> -1.209 </x1-m>
       <y1-m> -0.553 </y1-m>
@@ -444,8 +483,8 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueAvantDroite</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>30</factor>
+    <property>surface-positions/aileron-pos-norm</property>
+    <factor> 30 </factor>
     <axis>
       <x1-m> -1.209 </x1-m>
       <y1-m>  0.553 </y1-m>
@@ -468,9 +507,9 @@
       <z-m> -0.489 </z-m>
     </center>
     <axis>
-      <x>  0.0 </x>
-      <y> -1.0 </y>
-      <z>  0.0 </z>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -485,9 +524,9 @@
       <z-m> -0.489 </z-m>
     </center>
     <axis>
-      <x>  0.0 </x>
-      <y> -1.0 </y>
-      <z>  0.0 </z>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -502,9 +541,9 @@
       <z-m> -0.470 </z-m>
     </center>
     <axis>
-      <x>  0.0 </x>
-      <y> -1.0 </y>
-      <z>  0.0 </z>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -519,9 +558,9 @@
       <z-m> -0.470 </z-m>
     </center>
     <axis>
-      <x>  0.0 </x>
-      <y> -1.0 </y>
-      <z>  0.0 </z>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -566,8 +605,8 @@
   <animation>
     <type>rotate</type>
     <object-name>PorteAvantGauche</object-name>
-    <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> -80.0 </factor>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> -80 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m> -0.617 </y1-m>
@@ -582,8 +621,8 @@
   <animation>
     <type>rotate</type>
     <object-name>PorteAvantDroite</object-name>
-    <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> 80.0 </factor>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> 80 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m>  0.617 </y1-m>
@@ -598,8 +637,8 @@
   <animation>
     <type>rotate</type>
     <object-name>PorteArriereGauche</object-name>
-    <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> -80.0 </factor>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> -80 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m> -0.658 </y1-m>
@@ -614,8 +653,8 @@
   <animation>
     <type>rotate</type>
     <object-name>PorteArriereDroite</object-name>
-    <property>/instrumentation/doors/crew/position-norm</property>
-    <factor> 80.0 </factor>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> 80 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m>  0.658 </y1-m>
@@ -815,9 +854,9 @@
       <z-m>  0.659 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -837,9 +876,9 @@
       <z-m>  0.672 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -859,9 +898,9 @@
       <z-m>  0.685 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -881,9 +920,9 @@
       <z-m>  0.698 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -903,9 +942,9 @@
       <z-m>  0.711 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -925,9 +964,9 @@
       <z-m>  0.724 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -947,9 +986,9 @@
       <z-m>  0.740 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -969,9 +1008,9 @@
       <z-m>  0.742 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -991,9 +1030,9 @@
       <z-m> 0.746 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1013,9 +1052,9 @@
       <z-m> 0.750 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1035,9 +1074,9 @@
       <z-m> 0.754 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1057,9 +1096,9 @@
       <z-m> 0.758 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1079,9 +1118,9 @@
       <z-m> 0.762 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1101,9 +1140,9 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1123,9 +1162,9 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1145,9 +1184,9 @@
       <z-m> 0.777 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1167,9 +1206,9 @@
       <z-m> 0.773 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1189,9 +1228,9 @@
       <z-m> 0.773 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1211,9 +1250,9 @@
       <z-m> 0.772 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1233,9 +1272,9 @@
       <z-m> 0.771 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1255,9 +1294,9 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1277,9 +1316,9 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1299,9 +1338,9 @@
       <z-m> 0.769 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1321,9 +1360,9 @@
       <z-m> 0.768 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1343,9 +1382,9 @@
       <z-m> 0.767 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1365,9 +1404,9 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1387,9 +1426,9 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1409,9 +1448,9 @@
       <z-m> 0.765 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -1430,9 +1469,9 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0.0 </x>
-      <y> 1.0 </y>
-      <z> 0.0 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
