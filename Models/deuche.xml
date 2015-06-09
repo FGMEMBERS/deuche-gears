@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
 <PropertyList>
 
@@ -6,12 +6,17 @@
 
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/Deuche/Models/Liveries", 10);
+      var livery_update = aircraft.livery_update.new("Aircraft/deuche-gears/Models/Liveries", 10);
     </load>
     <unload>
       livery_update.stop();
     </unload>
   </nasal>
+
+<effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Windsceen</object-name>
+   </effect>
 
   <animation>
     <object-name>corps</object-name>
@@ -104,6 +109,45 @@
     <object-name>lampesB1</object-name>
 
     <!-- Transparence -->
+    <object-name>vitres</object-name>
+    <object-name>vitreAG1</object-name>
+    <object-name>vitreAG2</object-name>
+    <object-name>vitreBG</object-name>
+    <object-name>vitreAD1</object-name>
+    <object-name>vitreAD2</object-name>
+    <object-name>vitreBD</object-name>
+    <object-name>clignotants2</object-name>
+    <object-name>lampesB2</object-name>
+  </animation>
+
+ <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+     <object-name>vitres</object-name>
+    <object-name>vitreAG1</object-name>
+    <object-name>vitreAG2</object-name>
+    <object-name>vitreBG</object-name>
+    <object-name>vitreAD1</object-name>
+    <object-name>vitreAD2</object-name>
+    <object-name>vitreBD</object-name>
+    <object-name>clignotants2</object-name>
+    <object-name>lampesB2</object-name>
+    </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>vitres</object-name>
+    <object-name>vitreAG1</object-name>
+    <object-name>vitreAG2</object-name>
+    <object-name>vitreBG</object-name>
+    <object-name>vitreAD1</object-name>
+    <object-name>vitreAD2</object-name>
+    <object-name>vitreBD</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
     <object-name>vitres</object-name>
     <object-name>vitreAG1</object-name>
     <object-name>vitreAG2</object-name>
@@ -240,81 +284,16 @@
 -->
   </animation>
 
-  <effect>
-    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
-    <object-name>corps</object-name>
-    <object-name>capot</object-name>
-    <object-name>phares</object-name>
-    <object-name>cercles</object-name>
-    <object-name>attaches</object-name>
-    <object-name>coffre</object-name>
-    <object-name>ailes</object-name>
-    <object-name>barre</object-name>
-    <object-name>tampons</object-name>
-    <object-name>tampons2</object-name>
-    <object-name>parchocs1</object-name>
-    <object-name>parchocs2</object-name>
-    <object-name>retroG</object-name>
-    <object-name>retroD</object-name>
-    <object-name>calandre</object-name>
-    <object-name>chevron</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>baguetteAG</object-name>
-    <object-name>porteAD</object-name>
-    <object-name>baguetteAD</object-name>
-    <object-name>porteBG</object-name>
-    <object-name>baguetteBG</object-name>
-    <object-name>porteBD</object-name>
-    <object-name>baguetteBD</object-name>
-    <object-name>join01</object-name>
-    <object-name>join02</object-name>
-    <object-name>ventile</object-name>
-    <object-name>clignotants1</object-name>
-    <object-name>axes</object-name>
-    <object-name>baguettes</object-name>
-    <object-name>plaqueA</object-name>
-    <object-name>plaqueB</object-name>
-    <object-name>souspharesB</object-name>
-    <object-name>poigneecoffre</object-name>
-    <object-name>lampesB1</object-name>
-  </effect>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-    <object-name>vitreAG1</object-name>
-    <object-name>vitreAG2</object-name>
-    <object-name>vitreBG</object-name>
-    <object-name>vitreAD1</object-name>
-    <object-name>vitreAD2</object-name>
-    <object-name>vitreBD</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>vitreAG1</object-name>
-    <object-name>vitreAG2</object-name>
-    <object-name>vitreBG</object-name>
-    <object-name>vitreAD1</object-name>
-    <object-name>vitreAD2</object-name>
-    <object-name>vitreBD</object-name>
-    <object-name>clignotants2</object-name>
-    <object-name>lampesB2</object-name>
-  </animation>
-
   <!-- Interieur -->
   <model>
     <path>Aircraft/Deuche/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
 
@@ -322,12 +301,12 @@
   <model>
     <path>Aircraft/Deuche/Models/Immat/immat.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
 
@@ -389,8 +368,8 @@
     <object-name>ToutAvantGauche</object-name>
     <property>gear/gear[0]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
     </interpolation>
     <center>
       <x-m> -0.694 </x-m>
@@ -409,8 +388,8 @@
     <object-name>ToutAvantDroite</object-name>
     <property>gear/gear[1]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
     </interpolation>
     <center>
       <x-m> -0.694 </x-m>
@@ -429,8 +408,8 @@
     <object-name>ToutArriereGauche</object-name>
     <property>gear/gear[2]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.671 </x-m>
@@ -449,8 +428,8 @@
     <object-name>ToutArriereDroite</object-name>
     <property>gear/gear[3]/compression-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 1 </ind><dep> 20 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 20.0 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.671 </x-m>
@@ -468,8 +447,8 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueAvantGauche</object-name>
-    <property>surface-positions/aileron-pos-norm</property>
-    <factor> 30 </factor>
+    <property>controls/flight/aileron</property>
+    <factor>30</factor>
     <axis>
       <x1-m> -1.209 </x1-m>
       <y1-m> -0.553 </y1-m>
@@ -483,8 +462,8 @@
   <animation>
     <type>rotate</type>
     <object-name>RoueAvantDroite</object-name>
-    <property>surface-positions/aileron-pos-norm</property>
-    <factor> 30 </factor>
+    <property>controls/flight/aileron</property>
+    <factor>30</factor>
     <axis>
       <x1-m> -1.209 </x1-m>
       <y1-m>  0.553 </y1-m>
@@ -507,9 +486,9 @@
       <z-m> -0.489 </z-m>
     </center>
     <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
+      <x>  0.0 </x>
+      <y> -1.0 </y>
+      <z>  0.0 </z>
     </axis>
   </animation>
 
@@ -524,9 +503,9 @@
       <z-m> -0.489 </z-m>
     </center>
     <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
+      <x>  0.0 </x>
+      <y> -1.0 </y>
+      <z>  0.0 </z>
     </axis>
   </animation>
 
@@ -541,9 +520,9 @@
       <z-m> -0.470 </z-m>
     </center>
     <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
+      <x>  0.0 </x>
+      <y> -1.0 </y>
+      <z>  0.0 </z>
     </axis>
   </animation>
 
@@ -558,9 +537,9 @@
       <z-m> -0.470 </z-m>
     </center>
     <axis>
-      <x>  0 </x>
-      <y> -1 </y>
-      <z>  0 </z>
+      <x>  0.0 </x>
+      <y> -1.0 </y>
+      <z>  0.0 </z>
     </axis>
   </animation>
 
@@ -603,23 +582,10 @@
 
   <!-- Porte avant gauche -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteAvantGauche</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Lcrewexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteAvantGauche</object-name>
-    <property>instrumentation/doors/Lcrew/position-norm</property>
-    <factor> -80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> -80.0 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m> -0.617 </y1-m>
@@ -632,23 +598,10 @@
 
   <!-- Porte avant droite -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteAvantDroite</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Rcrewexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteAvantDroite</object-name>
-    <property>instrumentation/doors/Rcrew/position-norm</property>
-    <factor> 80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> 80.0 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m>  0.617 </y1-m>
@@ -661,23 +614,10 @@
 
   <!-- Porte arriere gauche -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteArriereGauche</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Lpassengerexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteArriereGauche</object-name>
-    <property>instrumentation/doors/Lpassenger/position-norm</property>
-    <factor> -80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> -80.0 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m> -0.658 </y1-m>
@@ -690,23 +630,10 @@
 
   <!-- Porte arriere droite -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteArriereDroite</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Rpassengerexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteArriereDroite</object-name>
-    <property>instrumentation/doors/Rpassenger/position-norm</property>
-    <factor> 80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> 80.0 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m>  0.658 </y1-m>
@@ -892,55 +819,9 @@
   </animation>
 
   <animation>
-    <name>CapotteTotale</name>
-    <object-name>capote00</object-name>
-    <object-name>capote01</object-name>
-    <object-name>capote02</object-name>
-    <object-name>capote03</object-name>
-    <object-name>capote04</object-name>
-    <object-name>capote05</object-name>
-    <object-name>capote06</object-name>
-    <object-name>capote07</object-name>
-    <object-name>capote08</object-name>
-    <object-name>capote09</object-name>
-    <object-name>capote10</object-name>
-    <object-name>capote11</object-name>
-    <object-name>capote12</object-name>
-    <object-name>capote13</object-name>
-    <object-name>capote14</object-name>
-    <object-name>capote15</object-name>
-    <object-name>capote16</object-name>
-    <object-name>capote17</object-name>
-    <object-name>capote18</object-name>
-    <object-name>capote19</object-name>
-    <object-name>capote20</object-name>
-    <object-name>capote21</object-name>
-    <object-name>capote22</object-name>
-    <object-name>capote23</object-name>
-    <object-name>capote24</object-name>
-    <object-name>capote25</object-name>
-    <object-name>capote26</object-name>
-    <object-name>capote27</object-name>
-    <object-name>capote28</object-name>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>CapotteTotale</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.roofexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>capote00</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.034 </ind><dep> 150 </dep></entry>
@@ -952,16 +833,16 @@
       <z-m>  0.659 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule01</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.034 </ind><dep>  0 </dep></entry>
@@ -974,16 +855,16 @@
       <z-m>  0.672 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule02</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.068 </ind><dep>   0 </dep></entry>
@@ -996,16 +877,16 @@
       <z-m>  0.685 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule03</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.102 </ind><dep>  0 </dep></entry>
@@ -1018,16 +899,16 @@
       <z-m>  0.698 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule04</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.136 </ind><dep>  0 </dep></entry>
@@ -1040,16 +921,16 @@
       <z-m>  0.711 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule05</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.170 </ind><dep>  0 </dep></entry>
@@ -1062,16 +943,16 @@
       <z-m>  0.724 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule06</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.204 </ind><dep>  0 </dep></entry>
@@ -1084,16 +965,16 @@
       <z-m>  0.740 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule07</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.238 </ind><dep>   0 </dep></entry>
@@ -1106,16 +987,16 @@
       <z-m>  0.742 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule08</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.272 </ind><dep>  0 </dep></entry>
@@ -1128,16 +1009,16 @@
       <z-m> 0.746 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule09</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.306 </ind><dep>  0 </dep></entry>
@@ -1150,16 +1031,16 @@
       <z-m> 0.750 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule10</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.340 </ind><dep>  0 </dep></entry>
@@ -1172,16 +1053,16 @@
       <z-m> 0.754 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule11</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.374 </ind><dep>  0 </dep></entry>
@@ -1194,16 +1075,16 @@
       <z-m> 0.758 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule12</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.408 </ind><dep>  0 </dep></entry>
@@ -1216,16 +1097,16 @@
       <z-m> 0.762 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule13</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.442 </ind><dep>  0 </dep></entry>
@@ -1238,16 +1119,16 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule14</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.476 </ind><dep>  0 </dep></entry>
@@ -1260,16 +1141,16 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule15</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.510 </ind><dep>   0 </dep></entry>
@@ -1282,16 +1163,16 @@
       <z-m> 0.777 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule16</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.544 </ind><dep>  0 </dep></entry>
@@ -1304,16 +1185,16 @@
       <z-m> 0.773 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule17</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.578 </ind><dep>  0 </dep></entry>
@@ -1326,16 +1207,16 @@
       <z-m> 0.773 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule18</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.612 </ind><dep>  0 </dep></entry>
@@ -1348,16 +1229,16 @@
       <z-m> 0.772 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule19</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.646 </ind><dep>  0 </dep></entry>
@@ -1370,16 +1251,16 @@
       <z-m> 0.771 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule20</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.680 </ind><dep>  0 </dep></entry>
@@ -1392,16 +1273,16 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule21</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.714 </ind><dep>  0 </dep></entry>
@@ -1414,16 +1295,16 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule22</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.748 </ind><dep>  0 </dep></entry>
@@ -1436,16 +1317,16 @@
       <z-m> 0.769 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule23</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.782 </ind><dep>  0 </dep></entry>
@@ -1458,16 +1339,16 @@
       <z-m> 0.768 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule24</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.816 </ind><dep>  0 </dep></entry>
@@ -1480,16 +1361,16 @@
       <z-m> 0.767 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule25</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.850 </ind><dep>  0 </dep></entry>
@@ -1502,16 +1383,16 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule26</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.884 </ind><dep>  0 </dep></entry>
@@ -1524,16 +1405,16 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule27</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.918 </ind><dep>  0 </dep></entry>
@@ -1546,16 +1427,16 @@
       <z-m> 0.765 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule28</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.952 </ind><dep>  0 </dep></entry>
@@ -1567,73 +1448,65 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
-  <!-- Light cone left -->
-  <model>
-    <path>Aircraft/Deuche/Models/lights/light-cone.xml</path>
-    <offsets>
-      <x-m>          -1.631 </x-m>
-      <y-m>          -0.430 </y-m>
-      <z-m>           0.074 </z-m>
-      <heading-deg>   5 </heading-deg>
-      <pitch-deg>    -7.500 </pitch-deg>
-    </offsets>
-  </model>
+<!-- turn/brakelights -->
 
-  <model>
-    <path>Aircraft/Deuche/Models/lights/flash.xml</path>
-    <offsets>
-      <x-m> -1.675 </x-m>
-      <y-m> -0.430 </y-m>
-      <z-m>  0.074 </z-m>
-    </offsets>
-  </model>
+   <animation>
+  <type>material</type>
+  <object-name>Lfrontsignal</object-name>
+  <object-name>Ltailturn</object-name>
+  <condition>
+    <equals>
+     <property>controls/lighting/left_turn</property>
+     <value>1</value>
+    </equals>
+  </condition>
+  <emission>
+   <red>1.89</red>
+   <green>1.89</green>
+   <blue>0.0</blue>
+  </emission>
+ </animation>
 
-  <!-- Light cone right -->
-  <model>
-    <path>Aircraft/Deuche/Models/lights/light-cone.xml</path>
-    <offsets>
-      <x-m>          -1.631 </x-m>
-      <y-m>           0.430 </y-m>
-      <z-m>           0.074 </z-m>
-      <heading-deg>  -5 </heading-deg>
-      <pitch-deg>    -7.500 </pitch-deg>
-    </offsets>
-  </model>
+<animation>
+  <type>material</type>
+  <object-name>Rfrontsignal</object-name>
+  <object-name>Rtailturn</object-name>
+  <condition>
+    <equals>
+     <property>controls/lighting/right_turn</property>
+     <value>1</value>
+    </equals>
+  </condition>
+  <emission>
+   <red>1.89</red>
+   <green>1.89</green>
+   <blue>0.0</blue>
+  </emission>
+ </animation>
 
-  <model>
-    <path>Aircraft/Deuche/Models/lights/flash.xml</path>
-    <offsets>
-      <x-m> -1.675 </x-m>
-      <y-m>  0.430 </y-m>
-      <z-m>  0.074 </z-m>
-    </offsets>
-  </model>
+ <animation>
+  <type>material</type>
+  <object-name>tailightlens</object-name>
+    <condition>
+      <greater-than>
+          <property>controls/gear/brake-right</property>
+          <value> 0.1 </value>
+        </greater-than>
+    </condition>
+  <emission>
+   <red>2.0</red>
+   <green>1.25</green>
+   <blue>1.25</blue>
+  </emission>
+ </animation>
 
-  <model>
-    <path>Aircraft/Deuche/Models/lights/Rflash.xml</path>
-    <offsets>
-      <x-m>  1.842 </x-m>
-      <y-m> -0.388 </y-m>
-      <z-m> -0.163 </z-m>
-      <heading-deg> 180 </heading-deg>
-    </offsets>
-  </model>
 
-  <model>
-    <path>Aircraft/Deuche/Models/lights/Rflash.xml</path>
-    <offsets>
-      <x-m>  1.842 </x-m>
-      <y-m>  0.388 </y-m>
-      <z-m> -0.163 </z-m>
-      <heading-deg> 180 </heading-deg>
-    </offsets>
-  </model>
 
 </PropertyList>
 

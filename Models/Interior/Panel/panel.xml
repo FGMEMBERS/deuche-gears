@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
 <PropertyList>
 
-  <path>panel.ac</path>
+   <path>panel.ac</path>
 
   <animation>
     <!-- Objets opaques -->
@@ -22,24 +22,47 @@
       <x-m>  0.017 </x-m>
       <y-m> -0.295 </y-m>
       <z-m> -0.016 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -25 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -25.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
     </offsets>
   </model>
 
-  <!-- Switch light -->
-  <model>
-    <path>Aircraft/Deuche/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
-    <offsets>
-      <x-m>  0.016 </x-m>
-      <y-m> -0.352 </y-m>
-      <z-m>  0.023 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
+  <!-- Gear selector -->
+
+  <animation>
+  <object-name>gear-selector</object-name>
+  <type>rotate</type>
+  <property>controls/gearstick-y</property>
+  <factor>1</factor>
+  <center>
+   <x-m>-0.0890</x-m>
+   <y-m>-0.050175</y-m>
+   <z-m>0.074704</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <object-name>gear-selector</object-name>
+  <type>translate</type>
+  <property>controls/gearstick-x</property>
+  <factor>1</factor>
+  <center>
+   <x-m>-0.0890</x-m>
+   <y-m>-0.050175</y-m>
+   <z-m>0.074704</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
 
 </PropertyList>
 

@@ -6,34 +6,20 @@ Doors = {};
 
 Doors.new = func {
    obj = { parents : [Doors],
-           Lcrew : aircraft.door.new("instrumentation/doors/Lcrew", 8.0),
-           Rcrew : aircraft.door.new("instrumentation/doors/Rcrew", 10.0),
-           Lpassenger : aircraft.door.new("instrumentation/doors/Lpassenger", 10.0),
-           Rpassenger : aircraft.door.new("instrumentation/doors/Rpassenger", 10.0),
-           roof : aircraft.door.new("instrumentation/doors/roof", 10.0)
+           crew : aircraft.door.new("instrumentation/doors/crew", 8.0),
+           passenger : aircraft.door.new("instrumentation/doors/passenger", 10.0)
          };
    return obj;
 };
 
-Doors.Lcrewexport = func {
-   me.Lcrew.toggle();
+Doors.crewexport = func {
+   me.crew.toggle();
 }
 
-Doors.Rcrewexport = func {
-   me.Rcrew.toggle();
+Doors.passengerexport = func {
+   me.passenger.toggle();
 }
 
-Doors.Lpassengerexport = func {
-   me.Lpassenger.toggle();
-}
-
-Doors.Rpassengerexport = func {
-   me.Rpassenger.toggle();
-}
-
-Doors.roofexport = func {
-   me.roof.toggle();
-}
 
 # ==============
 # Initialization
