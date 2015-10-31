@@ -17,7 +17,7 @@
 
   <!-- ASI - Fuel -->
   <model>
-    <path>Aircraft/Deuche/Models/Interior/Panel/Instruments/asi-fuel/asi-fuel.xml</path>
+    <path>Aircraft/deuche-gears/Models/Interior/Panel/Instruments/asi-fuel/asi-fuel.xml</path>
     <offsets>
       <x-m>  0.017 </x-m>
       <y-m> -0.295 </y-m>
@@ -38,10 +38,10 @@
   <center>
    <x-m>-0.0890</x-m>
    <y-m>-0.050175</y-m>
-   <z-m>0.074704</z-m>
+   <z-m>-0.074704</z-m>
   </center>
   <axis>
-   <x>-1</x>
+   <x>1</x>
    <y>0</y>
    <z>0</z>
   </axis>
@@ -55,7 +55,7 @@
   <center>
    <x-m>-0.0890</x-m>
    <y-m>-0.050175</y-m>
-   <z-m>0.074704</z-m>
+   <z-m>-0.074704</z-m>
   </center>
   <axis>
    <x>1</x>

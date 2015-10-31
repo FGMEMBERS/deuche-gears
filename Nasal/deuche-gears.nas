@@ -121,24 +121,24 @@ var loop = func {
 	else {setprop("/controls/gear/brake-left", tbrake)};
 
   	if (gear.getValue() == 1) {
-	 setprop("/controls/gearstick-x", -0.41);
-	 setprop("/controls/gearstick-y", 21);
+	 setprop("/controls/gearstick-x", -0.04);
+	 setprop("/controls/gearstick-y", 35);
 	}
       if (gear.getValue() == 2) {
-	 setprop("/controls/gearstick-x", 0.41);
-	 setprop("/controls/gearstick-y", 21);
+	 setprop("/controls/gearstick-x", 0.04);
+	 setprop("/controls/gearstick-y", 35);
 	}
 	if (gear.getValue() == 3) {
-	 setprop("/controls/gearstick-x", -0.41);
-	 setprop("/controls/gearstick-y", -21);
+	 setprop("/controls/gearstick-x", -0.04);
+	 setprop("/controls/gearstick-y", -35);
 	}
 	if (gear.getValue() == 4) {
-	 setprop("/controls/gearstick-x", 0.41);
-	 setprop("/controls/gearstick-y", -21);
+	 setprop("/controls/gearstick-x", 0.04);
+	 setprop("/controls/gearstick-y", -35);
 	}
 	if (gear.getValue() == -1) {
-	 setprop("/controls/gearstick-x", 0.73);
-	 setprop("/controls/gearstick-y", 21);
+	 setprop("/controls/gearstick-x", 0.07);
+	 setprop("/controls/gearstick-y", 60);
 	}
 	if (gear.getValue() == 0) {
 	 setprop("/controls/gearstick-x", 0.0);
@@ -149,4 +149,4 @@ var loop = func {
 }
 
 loop();
-aircraft.livery.init("Aircraft/Kombi/Models/Liveries", "sim/model/livery/name");
+aircraft.livery.init("Aircraft/deuche-gears/Models/Liveries", "sim/model/livery/name");

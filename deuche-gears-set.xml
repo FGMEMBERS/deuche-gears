@@ -139,7 +139,7 @@
       <desc>clutch disengage</desc>
     </key>
     <key>
-      <name>l/L</name>
+      <name>k/K</name>
       <desc>Switch head lights on/off</desc>
     </key>
     <key>
@@ -159,56 +159,6 @@
       <desc>Walk forward while in Walk View</desc>
     </key>
   </help>
-	<menubar>
-		<default>
-			<menu n="10">
-				<label>Kombi</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<label>tilt Windscreen forward</label>
-						<binding>
-          <command>property-toggle</command>
-          <property>/controls/gear/screen</property>
-						</binding>
-					</item>
-					<item>
-						<label>put Softroof on</label>
-						<binding>
-          <command>property-toggle</command>
-          <property>/controls/gear/roof</property>
-						</binding>
-					</item>
-					<item>
-						<label>Select Livery</label>
-              <binding>
-                <command>nasal</command>
-                <script>aircraft.livery.dialog.toggle()</script>
-              </binding>
-			</item>
-          	<item>
-			 <label>Show engine parameters</label>
-        		 <binding>
-			  <command>nasal</command>
-			   <script>
-			   var eng=gui.Dialog.new("/sim/gui/dialogs/deuche-gears/menu/dialog", "Aircraft/deuche-gears/Nasal/eng_param.xml");
-			   eng.open();
-			  </script>
-			 </binding>
-			</item>
-			<item>
-		  	 <label>Hide engine parameters</label>
-        		 <binding>
-			  <command>nasal</command>
-			   <script>
-			    var eng=gui.Dialog.new("/sim/gui/dialogs/deuche-gears/menu/dialog", "Aircraft/deuche-gears/Nasal/eng_param.xml");
-			    eng.close();
-			   </script>
-			  </binding>
-		 	 </item>
-		 </menu>
-
-		</default>
-	</menubar>
 
      	<hitches>
 	<!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
@@ -262,7 +212,13 @@
       <min-lb>100</min-lb>
     </weight>
 
+    <menubar include="Dialogs/deuche-gears-menu.xml"/>
+
  </sim>
+
+  <input>
+    <keyboard include="Nasal/deuche-gears-keyboard.xml"/>
+  </input>
  
  <!--ENGINES-->
  <engines>
@@ -320,360 +276,26 @@
 	</horn>
 
  </controls>
- 
- <!-- INPUT -->
 
-<input>
-	<keyboard>
-
-	  <!--shift up/down-->
-        <key n="362"> 
-         <name>Home</name>
-         <desc>Shift Up</desc>
-         <binding>
-          <command>property-adjust</command>
-          <property>/engines/engine/gear</property>
-          <step type="double">1</step>
-          <min type="double">-1</min>
-          <max type="double">4</max>
-	   </binding>
-        </key>
-        <key n="363"> 
-          <name>End</name>
-          <desc>Shift Down</desc>
-         <binding>
-          <command>property-adjust</command>
-          <property>/engines/engine/gear</property>
-          <step type="double">-1</step>
-          <min type="double">-1</min>
-          <max type="double">4</max>
-	   </binding>
-        </key>
-		<key n="8"> 
-         <name>Backspace</name>
-         <desc>Clutch</desc>
-         <binding>
-		  <command>property-assign</command>
-		  <property>/engines/engine/clutch</property>
-		  <value>1</value>
-	     </binding>
-		 <mod-up>
-		  <binding>
-           <command>property-assign</command>
-		   <property>/engines/engine/clutch</property>
-		   <value>0</value>
-          </binding>
-		 </mod-up>
-		</key>
-
-	  <!--starter-->
-        <key n="83"> 
-          <name>S</name>
-          <desc>Start</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>engines/engine[0]/cranking</property>
-            <value type="int">1</value>
-          </binding>
-        </key>
-        <key n="115"> 
-          <name>s</name>
-          <desc>Start</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>engines/engine[0]/cranking</property>
-            <value type="int">1</value>
-          </binding>
-        </key>
-
-	<!--instrument lights-->
- 	<key n="108">
- 	 <name>l</name>
- 	 <desc>Switch on instrument illumination</desc>
-  	 <binding>
- 	  <command>property-assign</command>
- 	  <property>/controls/lighting/instruments-norm</property>
-	  <value type="int">1</value>
-	  </binding>
-	 </key>
- 	<key n="76">
- 	 <name>L</name>
- 	 <desc>Switch off instrument illumination</desc>
-  	 <binding>
- 	  <command>property-assign</command>
- 	  <property>/controls/lighting/instruments-norm</property>
-	  <value type="int">0</value>
-	  </binding>
-	 </key>
-
-	<!--walker-->
-        <key n="111"> 
-          <name>o</name>
-          <desc>get Walker out</desc>
-          <binding> 
-            <command>nasal</command>
-          <script>walk.get_out();</script>
-          </binding>
-        </key>
-        <key n="79"> 
-          <name>O</name>
-          <desc>get Walker in</desc>
-          <binding> 
-            <command>nasal</command>
-          <script>walk.get_in();</script>
-          </binding>
-        </key>
-     		 <key n="119"> 
-      	  <name>w</name>
-     		   <desc>walk forward</desc>
-     	   <binding n="0"> 
-  			 <command>property-toggle</command>
-  			 <property>/sim/walker/walking</property>
-        </binding>
-				<mod-up>
-					<binding>
-			 		 <command>property-toggle</command>
-  				 <property>/sim/walker/walking</property>
-        </binding>
-				</mod-up>
-      </key>
-
-
-<!--turn signals-->
-      <key n="65">
-       <name>A</name>
-       <desc>Right turn signal</desc>
-       <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/turn</property>
-        <step type="double">1</step>
-        <min type="double">-1</min>
-        <max type="double">1</max>
-	 </binding>
- 	</key>
-      <key n="97">
-       <name>a</name>
-       <desc>Right turn signal</desc>
-       <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/turn</property>
-        <step type="double">1</step>
-        <min type="double">-1</min>
-        <max type="double">1</max>
-	 </binding>
- 	</key>
-      <key n="360">
-       <name>PageUp</name>
-       <desc>Right turn signal</desc>
-       <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/turn</property>
-        <step type="double">1</step>
-        <min type="double">-1</min>
-        <max type="double">1</max>
-	 </binding>
- 	</key>
-
-
-      <key n="90">
-       <name>Z</name>
-       <desc>Left turn signal</desc>
-       <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/turn</property>
-        <step type="double">-1</step>
-        <min type="double">-1</min>
-        <max type="double">1</max>
-	 </binding>
- 	</key> 
-      <key n="122">
-       <name>z</name>
-       <desc>Left turn signal</desc>
-       <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/turn</property>
-        <step type="double">-1</step>
-        <min type="double">-1</min>
-        <max type="double">1</max>
-	 </binding>
- 	</key> 
-      <key n="361">
-       <name>PageDown</name>
-       <desc>Left turn signal</desc>
-       <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/turn</property>
-        <step type="double">-1</step>
-        <min type="double">-1</min>
-        <max type="double">1</max>
-	 </binding>
- 	</key> 
-
-
-<!--headlight on-->
-      <key n="75">
-       <name>K</name>
-       <desc>Headlight</desc>
-       <binding>
-        <command>property-toggle</command>
-        <property>controls/lighting/headlamp</property>
-	 </binding>
- 	</key> 
-
-      <key n="107">
-       <name>k</name>
-       <desc>Headlight</desc>
-       <binding>
-        <command>property-toggle</command>
-        <property>controls/lighting/headlamp</property>
-	 </binding>
- 	</key> 
-	
-	<!--wipers-->
-
-	<key n="78">
-       <name>N</name>
-       <desc>Wiper freq decrease</desc>
-       <binding>
-        <command>property-adjust</command>
-        <property>controls/wiper/factor</property>
-	  <step type="int">-1</step>
-	  <min type="int">0</min>
-	  <max type="int">2</max>
-	 </binding>
- 	</key> 
-
-     <key n="110">
-      <name>n</name>
-      <desc>Wiper freq increase</desc>
-      <binding>
-       <command>property-adjust</command>
-       <property>controls/wiper/factor</property>
-	  <step type="int">1</step>
-	  <min type="int">0</min>
-	  <max type="int">2</max>
-	 </binding>
- 	</key> 
-
-	<!--horn-->
-        <key n="72"> 
-          <name>H</name>
-          <desc>Horn</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>controls/horn</property>
-            <value type="int">1</value>
-          </binding>
-        </key>
-        <key n="104"> 
-          <name>h</name>
-          <desc>Horn</desc>
-          <binding> 
-            <command>property-assign</command>
-            <property>controls/horn</property>
-            <value type="int">1</value>
-          </binding>
-	    <mod-up>
-           <binding> 
-            <command>property-assign</command>
-            <property>controls/horn</property>
-            <value type="int">0</value>
-          </binding>
-	    </mod-up>
-        </key>
-
-      <key n="23">
-			<name>Ctrl-w</name>
-			<desc>Place Winch 40m in front of vehicle</desc>
-			<binding>
-				<command>property-assign</command>
-				<property>/controls/winch/place</property>
-				<value type="bool">true</value>
-			</binding>
-			<mod-up>
-				<binding>
-					<command>property-assign</command>
-					<property>/controls/winch/place</property>
-					<value type="bool">false</value>
-				</binding>
-			</mod-up>
-			</key>
-			<key n="87">
-				<name>W</name>
-				<desc>Toggle winch hook</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-						var p = "/sim/hitches/winch/open";
-						setprop(p, !getprop(p));
-					</script>
-				</binding>
-			</key>
-			<key n="119">
-				<name>w</name>
-				<desc>Increase winch speed</desc>
-				<binding>
-					<command>nasal</command>
-					<script>interpolate("/sim/hitches/winch/winch/rel-speed", 1.0, 2)</script>
-				</binding>
-				<mod-up>
-					<binding>
-						<command>nasal</command>
-						<script>interpolate("/sim/hitches/winch/winch/rel-speed", 0.0, 2)</script>
-					</binding>
-				</mod-up>
-			</key>
-			<key n="15">
-				<name>Ctrl-o</name>
-				<desc>Find aircraft for aerotow</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>/controls/aerotow/find-aircraft</property>
-					<value type="bool">true</value>
-				</binding>
-				<mod-up>
-					<binding>
-						<command>property-assign</command>
-						<property>/controls/aerotow/find-aircraft</property>
-						<value type="bool">false</value>
-					</binding>
-				</mod-up>
-			</key>
-			<key n="111">
-				<name>o</name>
-				<desc>Lock aerotow hook</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>/sim/hitches/aerotow/open</property>
-					<value type="bool">false</value>
-				</binding>
-			</key>
-			<key n="79">
-				<name>O</name>
-				<desc>Open aerotow hook</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>/sim/hitches/aerotow/open</property>
-					<value type="bool">true</value>
-				</binding>
-			</key>
-
-	</keyboard>
-</input>
 
 <!-- -NASAL- -->
  <nasal>
 
-  <Kombi>
-   <file>Aircraft/deuche-gears/Nasal/deuche-gears.nas</file>
-  </Kombi>
+  <deuche-gears>
+    <file>Aircraft/deuche-gears/Nasal/immat.nas</file>
+    <file>Aircraft/deuche-gears/Nasal/deuche-gears.nas</file>
+  </deuche-gears>
 
    <walk>
      <file>Aircraft/deuche-gears/Nasal/walk.nas</file>
      <script>main_loop();</script>
    </walk>
 
-  <failure>
+  <doors>
+   <file>Aircraft/deuche-gears/Nasal/doors.nas</file>
+  </doors>
+
+   <failure>
    <file>Aircraft/deuche-gears/Nasal/failure.nas</file>
   </failure>
 

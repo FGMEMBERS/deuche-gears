@@ -704,23 +704,10 @@
 
   <!-- Porte avant gauche -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteAvantGauche</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Lcrewexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteAvantGauche</object-name>
-    <property>instrumentation/doors/Lcrew/position-norm</property>
-    <factor> -80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> -80.0 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m> -0.617 </y1-m>
@@ -733,23 +720,10 @@
 
   <!-- Porte avant droite -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteAvantDroite</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Rcrewexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteAvantDroite</object-name>
-    <property>instrumentation/doors/Rcrew/position-norm</property>
-    <factor> 80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> 80.0 </factor>
     <axis>
       <x1-m> -0.619 </x1-m>
       <y1-m>  0.617 </y1-m>
@@ -762,23 +736,10 @@
 
   <!-- Porte arriere gauche -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteArriereGauche</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Lpassengerexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteArriereGauche</object-name>
-    <property>instrumentation/doors/Lpassenger/position-norm</property>
-    <factor> -80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> -80.0 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m> -0.658 </y1-m>
@@ -791,23 +752,10 @@
 
   <!-- Porte arriere droite -->
   <animation>
-    <type>pick</type>
-    <object-name>PorteArriereDroite</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.Rpassengerexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>PorteArriereDroite</object-name>
-    <property>instrumentation/doors/Rpassenger/position-norm</property>
-    <factor> 80 </factor>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor> 80.0 </factor>
     <axis>
       <x1-m>  0.202 </x1-m>
       <y1-m>  0.658 </y1-m>
@@ -993,55 +941,9 @@
   </animation>
 
   <animation>
-    <name>CapotteTotale</name>
-    <object-name>capote00</object-name>
-    <object-name>capote01</object-name>
-    <object-name>capote02</object-name>
-    <object-name>capote03</object-name>
-    <object-name>capote04</object-name>
-    <object-name>capote05</object-name>
-    <object-name>capote06</object-name>
-    <object-name>capote07</object-name>
-    <object-name>capote08</object-name>
-    <object-name>capote09</object-name>
-    <object-name>capote10</object-name>
-    <object-name>capote11</object-name>
-    <object-name>capote12</object-name>
-    <object-name>capote13</object-name>
-    <object-name>capote14</object-name>
-    <object-name>capote15</object-name>
-    <object-name>capote16</object-name>
-    <object-name>capote17</object-name>
-    <object-name>capote18</object-name>
-    <object-name>capote19</object-name>
-    <object-name>capote20</object-name>
-    <object-name>capote21</object-name>
-    <object-name>capote22</object-name>
-    <object-name>capote23</object-name>
-    <object-name>capote24</object-name>
-    <object-name>capote25</object-name>
-    <object-name>capote26</object-name>
-    <object-name>capote27</object-name>
-    <object-name>capote28</object-name>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>CapotteTotale</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>  
-      <binding>
-        <command>nasal</command>
-        <script>doors.doorsystem.roofexport();</script>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
     <type>rotate</type>
     <object-name>capote00</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.034 </ind><dep> 150 </dep></entry>
@@ -1053,16 +955,16 @@
       <z-m>  0.659 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule01</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.034 </ind><dep>  0 </dep></entry>
@@ -1075,16 +977,16 @@
       <z-m>  0.672 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule02</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.068 </ind><dep>   0 </dep></entry>
@@ -1097,16 +999,16 @@
       <z-m>  0.685 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule03</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.102 </ind><dep>  0 </dep></entry>
@@ -1119,16 +1021,16 @@
       <z-m>  0.698 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule04</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.136 </ind><dep>  0 </dep></entry>
@@ -1141,16 +1043,16 @@
       <z-m>  0.711 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule05</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.170 </ind><dep>  0 </dep></entry>
@@ -1163,16 +1065,16 @@
       <z-m>  0.724 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule06</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.204 </ind><dep>  0 </dep></entry>
@@ -1185,16 +1087,16 @@
       <z-m>  0.740 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule07</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.238 </ind><dep>   0 </dep></entry>
@@ -1207,16 +1109,16 @@
       <z-m>  0.742 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule08</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.272 </ind><dep>  0 </dep></entry>
@@ -1229,16 +1131,16 @@
       <z-m> 0.746 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule09</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.306 </ind><dep>  0 </dep></entry>
@@ -1251,16 +1153,16 @@
       <z-m> 0.750 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule10</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.340 </ind><dep>  0 </dep></entry>
@@ -1273,16 +1175,16 @@
       <z-m> 0.754 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule11</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.374 </ind><dep>  0 </dep></entry>
@@ -1295,16 +1197,16 @@
       <z-m> 0.758 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule12</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.408 </ind><dep>  0 </dep></entry>
@@ -1317,16 +1219,16 @@
       <z-m> 0.762 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule13</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.442 </ind><dep>  0 </dep></entry>
@@ -1339,16 +1241,16 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule14</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.476 </ind><dep>  0 </dep></entry>
@@ -1361,16 +1263,16 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule15</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.510 </ind><dep>   0 </dep></entry>
@@ -1383,16 +1285,16 @@
       <z-m> 0.777 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule16</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.544 </ind><dep>  0 </dep></entry>
@@ -1405,16 +1307,16 @@
       <z-m> 0.773 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule17</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.578 </ind><dep>  0 </dep></entry>
@@ -1427,16 +1329,16 @@
       <z-m> 0.773 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule18</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.612 </ind><dep>  0 </dep></entry>
@@ -1449,16 +1351,16 @@
       <z-m> 0.772 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule19</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.646 </ind><dep>  0 </dep></entry>
@@ -1471,16 +1373,16 @@
       <z-m> 0.771 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule20</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.680 </ind><dep>  0 </dep></entry>
@@ -1493,16 +1395,16 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule21</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.714 </ind><dep>  0 </dep></entry>
@@ -1515,16 +1417,16 @@
       <z-m> 0.770 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule22</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.748 </ind><dep>  0 </dep></entry>
@@ -1537,16 +1439,16 @@
       <z-m> 0.769 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule23</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.782 </ind><dep>  0 </dep></entry>
@@ -1559,16 +1461,16 @@
       <z-m> 0.768 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule24</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.816 </ind><dep>  0 </dep></entry>
@@ -1581,16 +1483,16 @@
       <z-m> 0.767 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule25</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.850 </ind><dep>  0 </dep></entry>
@@ -1603,16 +1505,16 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule26</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.884 </ind><dep>  0 </dep></entry>
@@ -1625,16 +1527,16 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule27</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.918 </ind><dep>  0 </dep></entry>
@@ -1647,16 +1549,16 @@
       <z-m> 0.765 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>Roule28</object-name>
-    <property>/instrumentation/doors/roof/position-norm</property>
+    <property>/instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.000 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.952 </ind><dep>  0 </dep></entry>
@@ -1668,9 +1570,9 @@
       <z-m> 0.766 </z-m>
     </center>
     <axis>
-      <x> 0 </x>
-      <y> 1 </y>
-      <z> 0 </z>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
     </axis>
   </animation>
 

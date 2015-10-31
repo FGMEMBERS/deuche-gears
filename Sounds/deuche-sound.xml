@@ -6,16 +6,17 @@
 
     <crank>
       <name>engstart</name>
-      <path>Aircraft/Deuche/Sounds/start.wav</path>
+      <path>Aircraft/deuche-gears/Sounds/start.wav</path>
       <property>engines/engine/cranking</property>
       <volume>
-        <offset>-0.6</offset>
+        <offset>0.8</offset>
       </volume>
     </crank>
+
     <crank>
       <name>crank</name>
       <mode>looped</mode>
-      <path>Sounds/cranking.wav</path>
+      <path>Aircraft/deuche-gears/Sounds/start.wav</path>
       <condition>
         <property>engines/engine/cranking</property>
         <not>
@@ -26,19 +27,20 @@
         <offset>0.9</offset>
       </volume>
     </crank>
+
     <crank>
       <name>cough</name>
       <path>Sounds/coughing.wav</path>
       <property>engines/engine/running</property>
       <volume>
-        <offset>0.2</offset>
+        <offset>0.9</offset>
       </volume>
     </crank>
 
     <engine>
       <name>engine</name>
       <mode>looped</mode>
-      <path>Aircraft/Deuche/Sounds/running1.wav</path>
+      <path>Aircraft/deuche-gears/Sounds/running.wav</path>
       <condition>
           <greater-than>
             <property>engines/engine/rpm</property>
@@ -46,18 +48,19 @@
           </greater-than>
       </condition>
       <volume>
-        <property>engines/engine/throttle</property>
-        <factor>0.00375</factor>
-        <min>0.5</min>
-        <max>2.0</max>
+        <property>/engines/engine/rpm</property>
+        <factor>0.09</factor>
+        <min>0.03</min>
+        <max>1.0</max>
+        <offset>0.01</offset>
       </volume>
       <pitch>
-        <property>engines/engine/rpm</property>
-        <factor>0.0005</factor>
-        <min>0.2</min>
-        <max>2.0</max>
-        <offset>0.12</offset>
-      </pitch>
+    <property>/engines/engine/rpm</property>
+    <factor>0.0004</factor>
+    <min>0.5</min>
+    <max>2.0</max>
+    <offset>0.15</offset>
+   </pitch>
     </engine>
 
     <rumble>

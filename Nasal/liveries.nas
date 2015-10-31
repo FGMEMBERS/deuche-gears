@@ -1,1 +1,1 @@
-aircraft.livery.init("Aircraft/Deuche/Models/Liveries");
+aircraft.livery.init("Aircraft/deuche-gears/Models/Liveries");
